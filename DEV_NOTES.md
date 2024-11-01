@@ -1,0 +1,1 @@
+Image aspect ratios for cards should be 500x380

@@ -2,19 +2,25 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <modID>basicmod</modID>
-        <author>Me! (Or well, you. If you want to use \"quotes\" make sure you have slashes in front of them like this.)</author>
+        <modID>necro</modID>
+        <author>andrew</author>
 
         <!-- Change the path for your system to match your Steam installation. -->
         <!-- If you're not sure, go to Slay the Spire in the Steam library, and choose Manage -> Browse local files -->
-        <steam.windows>C:/Program Files (x86)/steam/steamapps</steam.windows>
+        <!-- <steam.windows>C:/Program Files (x86)/steam/steamapps</steam.windows> -->
         <steam.mac>${user.home}/Library/Application Support/Steam/steamapps</steam.mac>
-        <steam.linux>${user.home}/.local/share/Steam/steamapps</steam.linux>
+        <!-- <steam.linux>${user.home}/.local/share/Steam/steamapps</steam.linux> -->
         <!-- In the Maven tab, under Profiles, make sure only the profile for your system is enabled. Windows is the default. -->
 
         <!-- These don't have to be up to date, it's just nice if they are. -->
         <SlayTheSpire.version>12-18-2022</SlayTheSpire.version>
         <ModTheSpire.version>3.30.0</ModTheSpire.version>
+
+        <!-- These are mine, and I just want them around in case helpful. -->
+        <steamFolder>/Users/priyaghose/Library/Application Support/Steam/</steamFolder>
+        <workshopFolder>${steamFolder}steamapps/workshop/content/646570/</workshopFolder>
+        <baseStsPath>${steamFolder}steamapps/common/SlayTheSpire/</baseStsPath>
+        <stsPath>${baseStsPath}SlayTheSpire.app/Contents/Resources/</stsPath>
 
         <!-- These two 1.8s are referring to the Java version; don't change them. -->
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -23,13 +29,11 @@
     </properties>
 
     <!-- This information will be displayed in ModTheSpire, the modded launcher. -->
-    <name>Basic Mod</name>
-    <version>0.0.0</version>
+    <name>Necro</name>
+    <version>0.0.1</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
-    <description>This is a description!\n"This" is a second line of description.
-        This "\\" is a slash. If you add another line like this:
-        All the spaces on the left of this will be gone. If you want spacing on a new line, do it:\n    like this.</description>
+    <description>We're adding a new character: Necro. He plays with the discard pile.</description>
 
     <!--You shouldn't need to change anything below this point, but feel free to look at it.-->
     <!--You'll get a warning regarding these when you package your mod, but don't worry, it's just set up like this for convenience.-->
@@ -57,7 +61,7 @@
             <groupId>basemod</groupId>
             <artifactId>basemod</artifactId>
             <!--Don't worry about these version numbers, they're only used for display
-                in the left sidebar under External Libraries and don't need to be accurate.-->
+            in the left sidebar under External Libraries and don't need to be accurate.-->
             <version>5.44.0</version>
             <scope>system</scope>
             <systemPath>${steam.path}/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
